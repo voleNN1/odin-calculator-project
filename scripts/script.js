@@ -37,4 +37,8 @@ function operate(numOne, oper, numTwo) {
     }
 }
 
+function populateDisplay() {
+    
+}
+
 console.log(operate(8, '-', 8));
