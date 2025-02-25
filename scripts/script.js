@@ -1,6 +1,7 @@
 let inputOne = "";
 let inputTwo = "";
 let inputOperator = "";
+let result = 0;
 
 function addNum(numOne, numTwo) {
     let total =  parseInt(numOne) + parseInt(numTwo);
@@ -63,9 +64,9 @@ const btnAdd = document.querySelector("#add");
 const btnSubtract = document.querySelector("#subtract");
 const btnMultiply = document.querySelector("#multiply");
 const btnDivide = document.querySelector("#divide");
-const btnClear = document.querySelector("clear");
-const btnEquals = document.querySelector("equals");
-const btnDecimal = document.querySelector("decimal");
+const btnClear = document.querySelector("#clear");
+const btnEquals = document.querySelector("#equals");
+const btnDecimal = document.querySelector("#decimal");
 
 btnZero.addEventListener("click", () => {
     if (inputOperator === "") {
@@ -181,7 +182,6 @@ btnAdd.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOper.textContent = "+";
         inputOperator = "+";
-        btnDecimal.classList.remove("greyed");
         btnDecimal.removeAttribute("disabled");
     }
     else if (inputOperator === "+") {
@@ -190,7 +190,6 @@ btnAdd.addEventListener("click", () => {
     else {
         displayOper.textContent = "+";
         inputOperator = "+";
-        btnDecimal.classList.remove("greyed");
         btnDecimal.removeAttribute("disabled");
     }
 });
@@ -199,7 +198,6 @@ btnSubtract.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOper.textContent = "-";
         inputOperator = "-";
-        btnDecimal.classList.remove("greyed");
         btnDecimal.removeAttribute("disabled");
     }
     else if (inputOperator === "-") {
@@ -208,7 +206,6 @@ btnSubtract.addEventListener("click", () => {
     else {
         displayOper.textContent = "-";
         inputOperator = "-";
-        btnDecimal.classList.remove("greyed");
         btnDecimal.removeAttribute("disabled");
     }
 });
@@ -217,7 +214,6 @@ btnMultiply.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOper.textContent = "*";
         inputOperator = "*";
-        btnDecimal.classList.remove("greyed");
         btnDecimal.removeAttribute("disabled");
     }
     else if (inputOperator === "*") {
@@ -226,7 +222,6 @@ btnMultiply.addEventListener("click", () => {
     else {
         displayOper.textContent = "*";
         inputOperator = "*";
-        btnDecimal.classList.remove("greyed");
         btnDecimal.removeAttribute("disabled");
     }
 });
@@ -235,7 +230,6 @@ btnDivide.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOper.textContent = "/";
         inputOperator = "/";
-        btnDecimal.classList.remove("greyed");
         btnDecimal.removeAttribute("disabled");
     }
     else if (inputOperator === "/") {
@@ -244,13 +238,17 @@ btnDivide.addEventListener("click", () => {
     else {
         displayOper.textContent = "/";
         inputOperator = "/";
-        btnDecimal.classList.remove("greyed");
         btnDecimal.removeAttribute("disabled");
     }
 });
 
 btnEquals.addEventListener("click", () => {
-
+    result = operate(inputOne, inputOperator, inputTwo);
+    displayTotal.textContent = result;
+    inputOperator = "";
+    displayOne.textContent = result;
+    inputOne = result;
+    alert("Please select a new operator and continue, or press CLEAR to start again.");
 });
 
 btnClear.addEventListener("click", () => {
@@ -261,7 +259,6 @@ btnClear.addEventListener("click", () => {
     displayOper.textContent = "";
     displayTwo.textContent = "";
     displayTotal.textContent = "0";
-    btnDecimal.classList.remove("greyed");
     btnDecimal.removeAttribute("disabled");
 });
 
@@ -269,13 +266,11 @@ btnDecimal.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOne.textContent += ".";
         inputOne += ".";
-        btnDecimal.classList.add("greyed");
-        btnDecimal.setAttribute("disabled");
+        btnDecimal.setAttribute("disabled", "");
     }
     else {
         displayTwo.textContent += ".";
         inputTwo += ".";
-        btnDecimal.classList.add("greyed");
-        btnDecimal.setAttribute("disabled");
+        btnDecimal.setAttribute("disabled", "");
     }
 });
