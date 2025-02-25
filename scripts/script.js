@@ -184,15 +184,45 @@ btnAdd.addEventListener("click", () => {
 });
 
 btnSubtract.addEventListener("click", () => {
-
+    if (inputOperator === "") {
+        displayOper.textContent = "-";
+        inputOperator = "-";
+    }
+    else if (inputOperator === "-") {
+        alert("Operator already selected!");
+    }
+    else {
+        displayOper.textContent = "-";
+        inputOperator = "-";
+    }
 });
 
 btnMultiply.addEventListener("click", () => {
-
+    if (inputOperator === "") {
+        displayOper.textContent = "*";
+        inputOperator = "*";
+    }
+    else if (inputOperator === "*") {
+        alert("Operator already selected!");
+    }
+    else {
+        displayOper.textContent = "*";
+        inputOperator = "*";
+    }
 });
 
 btnDivide.addEventListener("click", () => {
-
+    if (inputOperator === "") {
+        displayOper.textContent = "/";
+        inputOperator = "/";
+    }
+    else if (inputOperator === "/") {
+        alert("Operator already selected!");
+    }
+    else {
+        displayOper.textContent = "/";
+        inputOperator = "/";
+    }
 });
 
 btnEquals.addEventListener("click", () => {
