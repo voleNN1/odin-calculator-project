@@ -246,6 +246,9 @@ btnEquals.addEventListener("click", () => {
     if (inputOne === "0" || inputTwo === "0") {
         alert("You won't break this calculator!");
     }
+    else if (inputOne === "" || inputTwo === "") {
+        alert("Please input two values and an operator!");
+    }
     else {
         result = operate(inputOne, inputOperator, inputTwo);
         displayTotal.textContent = result;
