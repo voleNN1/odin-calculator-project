@@ -67,6 +67,7 @@ const btnDivide = document.querySelector("#divide");
 const btnClear = document.querySelector("#clear");
 const btnEquals = document.querySelector("#equals");
 const btnDecimal = document.querySelector("#decimal");
+const btnBackspace = document.querySelector("#backspace");
 
 btnZero.addEventListener("click", () => {
     if (inputOperator === "") {
@@ -284,3 +285,14 @@ btnDecimal.addEventListener("click", () => {
         btnDecimal.setAttribute("disabled", "");
     }
 });
+
+btnBackspace.addEventListener("click", () => {
+    if (inputOperator === "") {
+        displayOne.textContent = inputOne.slice(0, -1);
+        inputOne = inputOne.slice(0, -1);
+    }
+    else {
+        displayTwo.textContent = inputTwo.slice(0, -1);
+        inputTwo = inputTwo.slice(0, -1);
+    }
+})
