@@ -1,32 +1,89 @@
-.calc-body {
+html {
+    background-color: #1a2230;
+    font-family: "Roboto", sans-serif;
+}
 
+.calc-body {
+    width: 608px;
+    height: 975px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 3px solid black;
+    margin: auto;
 }
 
 .calc-top {
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px;
+    background-color: #315691;
+    font-size: 30px;
+    height: 100px;
+}
 
+.calc-top > h1 {
+    margin: auto;
 }
 
 .display {
+    margin: 40px auto;
+    width: 400px;
+    border: 1px solid black;
+    background-color: #4a5669;
+    display: flex;
+    justify-content: space-between;
 
 }
 
 .left {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-around;
+    font-size: 20px;
+    
+}
 
+#equals-sign {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .right {
-
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50%;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 20px;
 }
 
-.input {
-
-}
-
-.output {
-
+.key-holder {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    justify-content: space-between;
 }
 
 .keys {
-    
+    background-color: #1a2342;
+    border: solid 1px black;
+    border-radius: 10px;
+    height: 135px;
+    width: 135px;
+    margin-top: 5px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#equals {
+    background-color: #1a4a1d;
+}
+
+#clear {
+    background-color: #63161f;
 }
 
