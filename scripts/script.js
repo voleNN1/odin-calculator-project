@@ -18,8 +18,23 @@ function divideNum(numOne, numTwo) {
     return numOne / numTwo;
 }
 
+function operate(numOne, oper, numTwo) {
+    switch (oper) {
+        case "+":
+            return addNum(numOne, numTwo);
+            break;
+        case "-":
+            return subtractNum(numOne, numTwo);
+            break;
+        case "*":
+            return multiplyNum(numOne, numTwo);
+            break;
+        case "/":
+            return divideNum(numOne, numTwo);
+            break;
+        default:
+            break;
+    }
+}
 
-console.log(addNum(5, 5));
-console.log(subtractNum(10, 5));
-console.log(multiplyNum(5, 10));
-console.log(divideNum(25, 5));
+console.log(operate(8, '-', 8));
