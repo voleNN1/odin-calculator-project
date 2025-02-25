@@ -92,6 +92,20 @@ btnTwo.addEventListener("click", () => {
     }
 })
 
+btnThree.addEventListener("click", () => {
 
+})
+
+btnFour.addEventListener("click", () => {
+
+})
+
+btnFive.addEventListener("click", () => {
+
+})
+
+btnSix.addEventListener("click", () => {
+
+})
 
 console.log(operate(8, '-', 8));
