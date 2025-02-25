@@ -254,6 +254,8 @@ btnEquals.addEventListener("click", () => {
         displayTotal.textContent = result;
         inputOperator = "";
         displayOne.textContent = result;
+        displayTwo.textContent = "0";
+        inputTwo = "";
         inputOne = result;
         alert("Please select a new operator and continue, or press CLEAR to start again.");
     }
@@ -263,9 +265,9 @@ btnClear.addEventListener("click", () => {
     inputOne = "0";
     inputTwo = "0";
     inputOperator = "";
-    displayOne.textContent = "";
+    displayOne.textContent = "0";
     displayOper.textContent = "";
-    displayTwo.textContent = "";
+    displayTwo.textContent = "0";
     displayTotal.textContent = "0";
     btnDecimal.removeAttribute("disabled");
 });
