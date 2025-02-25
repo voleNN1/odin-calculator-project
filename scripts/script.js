@@ -3,19 +3,19 @@ let inputTwo = "";
 let inputOperator = "";
 
 function addNum(numOne, numTwo) {
-    return numOne + numTwo;
+    return parseInt(numOne) + parseInt(numTwo);
 }
 
 function subtractNum(numOne, numTwo) {
-    return numOne - numTwo;
+    return parseInt(numOne) - parseInt(numTwo);
 }
 
 function multiplyNum(numOne, numTwo) {
-    return numOne * numTwo;
+    return parseInt(numOne) * parseInt(numTwo);
 }
 
 function divideNum(numOne, numTwo) {
-    return numOne / numTwo;
+    return parseInt(numOne) / parseInt(numTwo);
 }
 
 function operate(numOne, oper, numTwo) {
@@ -230,7 +230,13 @@ btnEquals.addEventListener("click", () => {
 });
 
 btnClear.addEventListener("click", () => {
-
+    inputOne = "0";
+    inputTwo = "0";
+    inputOperator = "";
+    displayOne.textContent = "";
+    displayOper.textContent = "";
+    displayTwo.textContent = "";
+    displayTotal.textContent = "0";
 });
 
 btnDecimal.addEventListener("click", () => {
