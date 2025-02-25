@@ -3,19 +3,27 @@ let inputTwo = "";
 let inputOperator = "";
 
 function addNum(numOne, numTwo) {
-    return parseInt(numOne) + parseInt(numTwo);
+    let total =  parseInt(numOne) + parseInt(numTwo);
+
+    return total.toFixed(5);
 }
 
 function subtractNum(numOne, numTwo) {
-    return parseInt(numOne) - parseInt(numTwo);
+    let total =  parseInt(numOne) - parseInt(numTwo);
+
+    return total.toFixed(5);
 }
 
 function multiplyNum(numOne, numTwo) {
-    return parseInt(numOne) * parseInt(numTwo);
+    let total = parseInt(numOne) * parseInt(numTwo);
+
+    return total.toFixed(5);
 }
 
 function divideNum(numOne, numTwo) {
-    return parseInt(numOne) / parseInt(numTwo);
+    let total = parseInt(numOne) / parseInt(numTwo);
+
+    return total.toFixed(5);
 }
 
 function operate(numOne, oper, numTwo) {
@@ -240,5 +248,12 @@ btnClear.addEventListener("click", () => {
 });
 
 btnDecimal.addEventListener("click", () => {
-
+    if (inputOperator === "") {
+        displayOne.textContent += ".";
+        inputOne += ".";
+    }
+    else {
+        displayTwo.textContent += ".";
+        inputTwo += ".";
+    }
 });
