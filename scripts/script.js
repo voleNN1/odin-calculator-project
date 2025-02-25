@@ -181,6 +181,8 @@ btnAdd.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOper.textContent = "+";
         inputOperator = "+";
+        btnDecimal.classList.remove("greyed");
+        btnDecimal.removeAttribute("disabled");
     }
     else if (inputOperator === "+") {
         alert("Operator already selected!");
@@ -188,6 +190,8 @@ btnAdd.addEventListener("click", () => {
     else {
         displayOper.textContent = "+";
         inputOperator = "+";
+        btnDecimal.classList.remove("greyed");
+        btnDecimal.removeAttribute("disabled");
     }
 });
 
@@ -195,6 +199,8 @@ btnSubtract.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOper.textContent = "-";
         inputOperator = "-";
+        btnDecimal.classList.remove("greyed");
+        btnDecimal.removeAttribute("disabled");
     }
     else if (inputOperator === "-") {
         alert("Operator already selected!");
@@ -202,6 +208,8 @@ btnSubtract.addEventListener("click", () => {
     else {
         displayOper.textContent = "-";
         inputOperator = "-";
+        btnDecimal.classList.remove("greyed");
+        btnDecimal.removeAttribute("disabled");
     }
 });
 
@@ -209,6 +217,8 @@ btnMultiply.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOper.textContent = "*";
         inputOperator = "*";
+        btnDecimal.classList.remove("greyed");
+        btnDecimal.removeAttribute("disabled");
     }
     else if (inputOperator === "*") {
         alert("Operator already selected!");
@@ -216,6 +226,8 @@ btnMultiply.addEventListener("click", () => {
     else {
         displayOper.textContent = "*";
         inputOperator = "*";
+        btnDecimal.classList.remove("greyed");
+        btnDecimal.removeAttribute("disabled");
     }
 });
 
@@ -223,6 +235,8 @@ btnDivide.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOper.textContent = "/";
         inputOperator = "/";
+        btnDecimal.classList.remove("greyed");
+        btnDecimal.removeAttribute("disabled");
     }
     else if (inputOperator === "/") {
         alert("Operator already selected!");
@@ -230,6 +244,8 @@ btnDivide.addEventListener("click", () => {
     else {
         displayOper.textContent = "/";
         inputOperator = "/";
+        btnDecimal.classList.remove("greyed");
+        btnDecimal.removeAttribute("disabled");
     }
 });
 
@@ -245,15 +261,21 @@ btnClear.addEventListener("click", () => {
     displayOper.textContent = "";
     displayTwo.textContent = "";
     displayTotal.textContent = "0";
+    btnDecimal.classList.remove("greyed");
+    btnDecimal.removeAttribute("disabled");
 });
 
 btnDecimal.addEventListener("click", () => {
     if (inputOperator === "") {
         displayOne.textContent += ".";
         inputOne += ".";
+        btnDecimal.classList.add("greyed");
+        btnDecimal.setAttribute("disabled");
     }
     else {
         displayTwo.textContent += ".";
         inputTwo += ".";
+        btnDecimal.classList.add("greyed");
+        btnDecimal.setAttribute("disabled");
     }
 });
