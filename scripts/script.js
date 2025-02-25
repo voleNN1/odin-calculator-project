@@ -243,12 +243,17 @@ btnDivide.addEventListener("click", () => {
 });
 
 btnEquals.addEventListener("click", () => {
-    result = operate(inputOne, inputOperator, inputTwo);
-    displayTotal.textContent = result;
-    inputOperator = "";
-    displayOne.textContent = result;
-    inputOne = result;
-    alert("Please select a new operator and continue, or press CLEAR to start again.");
+    if (inputOne === "0" || inputTwo === "0") {
+        alert("You won't break this calculator!");
+    }
+    else {
+        result = operate(inputOne, inputOperator, inputTwo);
+        displayTotal.textContent = result;
+        inputOperator = "";
+        displayOne.textContent = result;
+        inputOne = result;
+        alert("Please select a new operator and continue, or press CLEAR to start again.");
+    }
 });
 
 btnClear.addEventListener("click", () => {
